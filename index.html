@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Список Todo</title>
+</head>
+<body>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Todo List</h1>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-9">
+        <form id="todo-form" class="mb-4">
+          <div class="form-group">
+            <input type="text" class="form-control" id="todo-input" placeholder="Введите задачу">
+          </div>
+          <button type="submit" class="btn btn-primary mt-2">Добавить</button>
+        </form>
+        <ul class="list-group" id="todo-list"></ul>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
