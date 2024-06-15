@@ -5,6 +5,11 @@ getTodos();
 
 const form = document.getElementById('todo-form');
 const input = document.getElementById('todo-input');
+const todoList = document.getElementById('todo-list');
+
+if (getTodos().length === 0) {
+  todoList.style.display = 'none';
+}
 
 form.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -13,5 +18,6 @@ form.addEventListener('submit', (event) => {
     addTodoItem(todoText);
     saveTodos([...getTodos()]);
     input.value = '';
+    todoList.style.display = 'block';
   }
 });
